@@ -1,0 +1,155 @@
+---
+# Institution-local overrides for ISMS03 — University of Oxford Research Data ISMS
+# Access Control Policy, reproduced from the finished Oxford PDF as a case study of the
+# override workflow. See FINDINGS-ISMS03.md for every place this fell short of a verbatim
+# match.
+document: ISMS03
+
+document-author: Sarah Waters
+classification: Public
+version: 0.1
+review:
+  reviewer: null
+  date: null
+approval:
+  approver: null
+  date: null
+sources: null
+---
+
+<!-- isms:override id=overview.intro mode=replace
+     reason="Oxford's Overview cites ISO 27001 directly rather than the baseline's generic
+     'relevant standards (e.g. ISO/IEC 27001)' phrasing, and names 'the University of Oxford
+     Research Data ISMS' rather than the baseline's '{{organisation}}'s {{isms_name}}'
+     construction; matching either requires replacing the whole block."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Document Overview {#sec-overview}
+
+This Access Control Policy establishes the requirements to ensure the protection of
+{{< var environment_name >}}s within the scope of the {{< var organisation >}} Research Data
+{{< var isms_abbr >}} by managing access rights. This policy supports compliance with ISO 27001,
+ensuring that access to information is based on business needs and aligned with security
+requirements.
+
+<!-- isms:end id=overview.intro -->
+
+<!-- isms:override id=user-access.approval-chain mode=replace
+     reason="Oxford names three approvers with different scope and wording from the
+     baseline's generic approval-chain hint: Information Asset Owner/Administrator per study,
+     Environment Owner for infrastructure and non-human accounts, and Supporting Service
+     Owner for IT services."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+- New users or a change to user access shall be approved by:
+  - The {{< var roles.asset_owner >}} or an {{< var roles.asset_administrator >}} (for a study): for
+    information assets stored within a {{< var environment_name >}} project.
+  - {{< var roles.environment_owner >}}: for user access to infrastructure and code managing a
+    {{< var environment_name >}}, including non-human (service accounts).
+  - {{< var roles.service_owner >}} or their delegate: for access to any supporting IT service.
+
+<!-- isms:end id=user-access.approval-chain -->
+
+<!-- isms:override id=authentication mode=delete
+     reason="Oxford's policy has no standalone Authentication Principles section; the
+     baseline's numbered sections after User Access Management renumber down by one to match."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+<!-- isms:end id=authentication -->
+
+<!-- isms:override id=privileged-access mode=replace
+     reason="Oxford's Privileged Access Management paragraph differs in wording throughout
+     (word order, 'authorized' spelling, 'will be granted/maintained' vs 'shall')."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Privileged Access Management {#sec-privileged-access}
+
+Administrative or privileged accounts shall be tightly controlled and limited to authorized
+personnel. Privileged accounts should only be used for administrative activities. Privileged access
+management shall be controlled through a formal process and only the minimum privileges will be
+granted to carry out the role or task. A formal record of all privileges allocated will be
+maintained.
+
+<!-- isms:end id=privileged-access -->
+
+<!-- isms:override id=physical-access mode=replace
+     reason="Oxford names the Service Owner of a facility (not the baseline's generic
+     'facility owner or service manager'), cites the Information Classification Policy by
+     name, and names Approved Researchers and the Approved Researcher Agreement rather than
+     generic 'approved personnel'."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Physical Access {#sec-physical-access}
+
+Physical access shall only be granted on the authority of the Service Owner of a facility. All
+physical information systems shall be protected in accordance with their value and classification
+according to the Information Classification Policy. Approved Researchers shall be responsible for
+physical security measures in offices and other shared spaces to prevent unauthorised access to data
+via an end point device as detailed in the Approved Researcher Agreement.
+
+<!-- isms:end id=physical-access -->
+
+<!-- isms:override id=network-access mode=replace
+     reason="Oxford states Network Access as prose rather than the baseline's bulleted list,
+     and phrases segregation as a 'should' recommendation determined by risk assessment
+     results rather than the baseline's 'shall'."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Network Access {#sec-network-access}
+
+Diagnostic and configuration ports shall only be enabled for specified business reasons. All unused
+ports shall be disabled or removed. Changes to network configuration affecting
+{{< var environment_name >}} networks will be risk assessed and recorded. Segregation of networks
+should be implemented as determined by the results of the risk assessment.
+
+<!-- isms:end id=network-access -->
+
+<!-- isms:override id=os-access mode=replace
+     reason="Oxford's Operating System Access bullets differ in wording throughout (each
+     starts 'All users shall be required to...') and name the University of Oxford Password
+     Policy explicitly."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Operating System Access {#sec-os-access}
+
+- All users shall be required to confirm they are an authorised user at log-on.
+- All users shall be required to change their passwords periodically and in accordance with the
+  {{< var organisation >}} Password Policy.
+- All user sessions shall be configured to lock automatically after a period of inactivity in order
+  to reduce the risk of unauthorised access.
+- Where technically possible, all standard accounts that are delivered with operating systems shall
+  be disabled, deleted or have their "default" passwords changed on system installation.
+
+<!-- isms:end id=os-access -->
+
+<!-- isms:override id=information-system-access mode=replace
+     reason="Oxford phrases the first two bullets differently and moves the Environment
+     Owners' segregation duty out of the bulleted list into a trailing paragraph."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Information System Access {#sec-information-system-access}
+
+- Where adequate assurance is absent, account access shall be disabled such that re-enablement shall
+  only follow evidence of adequate assurance.
+- Removal of accounts shall also include the removal of any associated access rights.
+
+{{< var roles.environment_owner >}}s shall group together information assets as appropriate to
+achieve the required segregation on networks.
+
+<!-- isms:end id=information-system-access -->
+
+<!-- isms:override id=monitoring mode=replace
+     reason="Oxford's Monitoring and Logging paragraph differs in wording throughout (log
+     field list, 'anomalous activity', and conditional reporting on a judgement that
+     unauthorised access occurred) and drops the baseline's reference to organisation-specific
+     incident management procedures."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+## Monitoring and Logging {#sec-monitoring}
+
+Access to {{< var environment_name >}}s shall be logged and monitored for the purpose of
+investigating security incidents. Logs should include 'date/time/name/reason' and should be reviewed
+periodically to detect any unauthorised access attempts. Anomalous activity or violations shall be
+assessed and, where unauthorised access is judged to have occurred, will be reported as an
+information security incident.
+
+<!-- isms:end id=monitoring -->

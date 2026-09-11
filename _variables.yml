@@ -1,0 +1,21 @@
+organisation: "University of Oxford"
+environment_abbr: TRE
+environment_name: Trusted Research Environment
+isms_name: Research Data Information Security Management System
+isms_abbr: ISMS
+review:
+  access_review_period: term
+roles:
+  asset_administrator: Information Asset Administrator
+  asset_owner: Information Asset Owner
+  data_protection_function: Information Compliance Team
+  environment_owner: Environment Owner
+  executive_body: Council
+  funding_body: Information and Digital Committee
+  governance_body: Operational Management Group
+  ig_lead: Information Security and Compliance Lead
+  infrastructure_provider: Research Computing
+  security_function: Cyber Security Team
+  senior_risk_owner: Senior Information Risk Owner
+  service_owner: Supporting Service Owner
+  top_management_body: OxTRE Programme Board

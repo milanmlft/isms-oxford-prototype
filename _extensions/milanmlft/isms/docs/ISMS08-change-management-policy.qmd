@@ -1,0 +1,113 @@
+---
+isms-id: ISMS08
+title: "ISMS08 - Change Management Policy"
+filename: ISMS08-change-management-policy
+document-author: Policy Owner
+classification: public
+version: 1.1
+review:
+  reviewer: Policy Reviewer
+  date: 10/02/2025
+  period: 3 years
+approval:
+  approver: Approval Body
+  date: 12/03/2025
+sources: null
+baseline-doc-version: "2.0"
+number-sections: true
+provenance: >
+  PROTOTYPE PLACEHOLDER TEXT. Written to exercise multi-document composition; not derived
+  from any institution's approved policy and not fit for adoption as-is.
+---
+
+{{< include _preamble.qmd >}}
+
+<!-- isms:begin id=overview -->
+
+## Document Overview {#sec-overview}
+
+The purpose of this policy is to define the requirements for managing change. Any processes used to
+manage changes in specific Environments shall adhere to this policy. Changes to any supporting IT
+services should also adhere to this policy.
+
+<!-- isms:end id=overview -->
+
+<!-- isms:begin id=scope -->
+
+## Document Scope {#sec-scope}
+
+This policy applies to all departments, personnel, contractors, and third parties involved in the
+development, management, or modification of information systems, applications, and infrastructure
+with the scope of the {{< var isms_name >}} ({{< var isms_abbr >}}). This includes but is not
+limited to changes affecting:
+
+- Software
+- Documented information (including policy and procedures)
+- Hardware and network infrastructure
+- Security controls and configurations
+
+<!-- isms:end id=scope -->
+
+<!-- isms:begin id=managing hint="Adjust the change record fields to your own change process, and confirm which governance body retained records are made available to." -->
+
+## Managing Change {#sec-managing}
+
+All changes should consider and document the following in a change record. Change records shall be
+retained and made available to the {{< var roles.governance_body >}} on request:
+
+**1. Purpose**
+
+- What is the reason for the change?
+
+**2. Scope**
+
+- What services, processes, environment or component will change?
+
+**3. Impact**
+
+- How will this affect the users and/or organisation?
+
+**4. Risk assessment**
+
+- What is the risk during or after the change?
+- How will these risks be mitigated?
+- Determine the test to be done to ensure that the risk is mitigated.
+
+**5. Schedule**
+
+- When will the change happen?
+
+**6. Test plan**
+
+- What is the test plan pre and post change?
+
+**7. Communication plan**
+
+- How will the users be notified of the change/disruption?
+
+**8. Contingency/Rollback plans**
+
+- How will service be restored if the change fails?
+
+**9. Authorisation**
+
+- Who authorised the change?
+
+<!-- isms:end id=managing -->
+
+<!-- isms:begin id=types hint="Define your own change type categories, examples, and approval chains for each." -->
+
+## Change Types {#sec-types}
+
+Changes should be classified according to the following definitions. Each change type should have a
+documented approval chain:
+
+- **Standard Change:** A pre-defined, reproducible, repeatable change, for example the deployment of
+  a project within a {{< var environment_abbr >}}.
+
+- **Emergency Change:** A change made to resolve or mitigate the effect of an incident.
+
+- **Normal Change:** Any change not classed as standard or emergency, for example a non-urgent
+  defect fix or new feature.
+
+<!-- isms:end id=types -->

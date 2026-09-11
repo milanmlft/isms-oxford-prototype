@@ -1,0 +1,129 @@
+---
+# Institution-local overrides for ISMS02, reproducing the University of Oxford's
+# "Roles and Responsibilities" document as closely as the block/override grammar allows.
+document: ISMS02
+
+document-author: Sarah Waters
+classification: Public
+version: 0.1
+review:
+  reviewer: ""
+  date: ""
+approval:
+  approver: ""
+  date: ""
+sources: null
+---
+
+<!-- isms:override id=overview.contents mode=replace
+     reason="Oxford's contents list only names the four sections it kept after dropping the
+             framework/resources/shared-responsibility-model sections (see the deletions below);
+             a stray link to a deleted section would be a dead anchor."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+This document covers:
+
+- [Scope of the roles and responsibility](#sec-scope)
+- [Competencies expected](#sec-competence)
+- [Approved researcher, study and project roles](#sec-roles)
+- [Complete roles catalogue](#sec-roles-catalogue)
+
+<!-- isms:end id=overview.contents -->
+
+<!-- isms:override id=framework mode=delete
+     reason="Oxford's published document has no Information Governance Framework section (or its
+             Top Management / governance-body subsections); the register shows this as a deletion
+             rather than silently missing content."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+<!-- isms:end id=framework -->
+
+<!-- isms:override id=resources mode=delete
+     reason="Oxford's published document has no standalone Resources section."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+<!-- isms:end id=resources -->
+
+<!-- isms:override id=competence.requirements mode=replace
+     reason="Oxford names its specific data-provider assurance regime (the NHS DSP Toolkit,
+             referenced generically here as 'the NHS') and the two teams that design its
+             organisation-wide training, rather than the baseline's generic phrasing."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+The training listed in the roles catalogue below is determined through a training needs analysis.
+Approved researcher training ensures it meets the requirements of our key data providers, such as
+the NHS. {{< var organisation >}} wide training is mandatory and designed by
+{{< var roles.security_function >}} and the {{< var roles.data_protection_function >}} to meet the
+requirements of our obligations to data subjects.
+
+<!-- isms:end id=competence.requirements -->
+
+<!-- isms:override id=model mode=delete
+     reason="Oxford's published document has no Shared Responsibility Model section."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+<!-- isms:end id=model -->
+
+<!-- isms:override id=roles-catalogue.user mode=replace
+     reason="Oxford's User Roles table has no Project Ingress User row and instead has an
+             Airlock Manager role; its Project User row also omits the baseline's
+             writer/read-only/egresser sub-bullets."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+### User Roles {#sec-roles-catalogue-user}
+
+| User Roles                            |                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                             |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Role**                              | **Responsibilities**                                                                                                                                                                                                                                                                                                                                      | **Competency and Awareness Requirement**                                                                                                    |
+| Approved Researcher                   | A "safe" person. Defined by contracts, attestations and competency (training).<br>Must complete training and sign an approved researcher agreement which sets out responsibilities                                                                                                                                                                        | Approved researcher training<br><br>Complete the approved researcher agreement<br><br>Read and understand relevant policies and procedures. |
+| {{< var roles.asset_owner >}}         | The {{< var roles.asset_owner >}} is accountable for any confidential information processed by project users (see below) and for ensuring the safe use of that information. An {{< var roles.asset_owner >}} must sign the study agreement.                                                                                                               | Be an approved researcher<br><br>Sign the study agreement.                                                                                  |
+| {{< var roles.asset_administrator >}} | Be responsible for the day-to-day management of users and act with delegated authority from an {{< var roles.asset_owner >}}. {{< var roles.asset_administrator >}} responsibilities can be found in the information asset administrator agreement.                                                                                                       | Be an approved researcher.<br><br>Read and understand the {{< var roles.asset_administrator >}} responsibilities.                           |
+| Project User                          | Project users have access to some or all data within the boundaries of a project within an environment.<br><br>Responsibilities for all project users are set out in the approved researcher agreement and any specific requirements of that project related to handling of the data within that project as set out by the {{< var roles.asset_owner >}}. | Be an approved researcher                                                                                                                   |
+| Airlock Manager                       | A person approved to review data ingress and egress to a specific OxTRE project.                                                                                                                                                                                                                                                                          | Be an approved researcher                                                                                                                   |
+
+<!-- isms:end id=roles-catalogue.user -->
+
+<!-- isms:override id=roles-catalogue.management mode=replace
+     reason="Oxford's Management table has no Senior Information Risk Owner row, and refers to
+             its top-management and governance bodies by short forms ('the Board', 'OMG') the
+             baseline doesn't have variables for."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+### Management {#sec-roles-catalogue-management}
+
+| Management                              |                                                                                                                                                                                                                                                                                |                                          |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| **Role**                                | **Responsibilities**                                                                                                                                                                                                                                                           | **Competency and Awareness Requirement** |
+| {{< var roles.executive_body >}}        | Oversight of the {{< var organisation >}} and responsible for setting risk appetite/tolerance. Statement of Primary responsibilities of {{< var roles.executive_body >}}                                                                                                       | NA                                       |
+| {{< var roles.top_management_body >}}   | Receives reports from the {{< var roles.governance_body >}}, provides advice and assurances.<br>Terms of Reference                                                                                                                                                             | Members must read and understand ToR     |
+| {{< var roles.governance_body >}} (OMG) | Ensures that effective and informed decisions are made about the operation of the Research Data {{< var isms_abbr >}} and that evidence of this is reported to the Board. OMG may also escalate risks to the Board that cannot be resolved by the Group.<br>Terms of Reference | Members must read and understand ToR     |
+
+<!-- isms:end id=roles-catalogue.management -->
+
+<!-- isms:override id=roles-catalogue.governance mode=replace
+     reason="Oxford's Governance table lists only the IG Lead role (no separate IG Officer or
+             Internal Auditor rows) and names the NHS Data Security & Protection Toolkit and
+             'the SIRO' specifically, rather than the baseline's generic phrasing."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+### Governance {#sec-roles-catalogue-governance}
+
+| Governance                |                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                             |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Role**                  | **Responsibilities**                                                                                                                                                                                                                                                                                                                                                                                             | **Competency and Awareness Requirement**                                    |
+| {{< var roles.ig_lead >}} | Responsibility for the managerial operation of the Research Data {{< var isms_abbr >}}, Information Governance (IG) Framework, and compliance with the NHS Data Security & Protection (DSP) Toolkit. Provides expertise to and liaises between the SIRO and research teams. Acts as the primary IG contact for all external parties and as a point of escalation for IG matters within {{< var organisation >}}. | As detailed as part of recruitment in Job Description, Advert and Interview |
+
+<!-- isms:end id=roles-catalogue.governance -->
+
+<!-- isms:override id=roles-catalogue.annex-a mode=replace
+     reason="Oxford names its actual training course and links to its real location, rather than
+             the baseline's generic placeholder."
+     approved-by="Sarah Waters" approved-date=2026-09-11 -->
+
+### Annex A - Suitable Training Resources {#sec-roles-catalogue-annex-a}
+
+| Role                | Training                                                 | Link                                                                                                                                                                                                        |
+| ------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Approved Researcher | Information Security and Data Protection training course | [Information Security and Data Protection training course](https://unioxfordnexus.sharepoint.com/sites/OXINTRANET-it-digital/SitePages/Information-Security-and-Data-Protection-training-course.aspx?web=1) |
+
+<!-- isms:end id=roles-catalogue.annex-a -->
